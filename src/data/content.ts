@@ -3,10 +3,10 @@ export type L = Record<Lang, string>; // texto nos dois idiomas
 
 export const profile = {
   name: "Rafael Utiyama",
-  email: "seu@email.com", // TODO
+  email: "rafaelhu763@email.com", // TODO
   github: "https://github.com/utiyamaRafael",
-  linkedin: "https://linkedin.com/in/seu-usuario", // TODO
-  cv: "/cv-rafael-utiyama.pdf", // coloque o PDF em /public
+  linkedin: "https://linkedin.com/in/rafaelutiyama", // TODO
+  cv: "/CurriculoRafaelUtiyama.pdf",
 };
 
 export const ui = {
@@ -55,7 +55,7 @@ export const timeline: TimelineItem[] = [
   {
     period: { pt: "2025 – 2028", en: "2025 – 2028" },
     title: { pt: "Bacharelado em Ciência da Computação", en: "B.Sc. in Computer Science" },
-    place: { pt: "Sua Universidade", en: "Your University" },
+    place: { pt: "Unifil", en: "Unifil" },
     description: {
       pt: "Algoritmos, estruturas de dados, bancos de dados e engenharia de software.",
       en: "Algorithms, data structures, databases and software engineering.",
@@ -63,32 +63,22 @@ export const timeline: TimelineItem[] = [
     type: "formacao",
   },
   {
-    period: { pt: "2025 – atual", en: "2025 – present" },
-    title: { pt: "Projetos pessoais e open source", en: "Personal and open source projects" },
-    place: { pt: "GitHub", en: "GitHub" },
+    period: { pt: "2021 – 2024", en: "2021 – 2024" },
+    title: { pt: "Curso técnico de TI", en: "Technical course in IT" },
+    place: { pt: "IFPR", en: "IFPR" },
     description: {
       pt: "Desenvolvimento de sistemas completos, do modelo de dados à interface.",
       en: "Building complete systems, from the data model to the interface.",
-    },
-    type: "experiencia",
-  },
-  {
-    period: { pt: "2024", en: "2024" },
-    title: { pt: "Curso técnico / certificação", en: "Technical course / certification" },
-    place: { pt: "Plataforma ou instituição", en: "Platform or institution" },
-    description: {
-      pt: "Substitua por um curso relevante que você concluiu.",
-      en: "Replace with a relevant course you completed.",
     },
     type: "formacao",
   },
 ];
 
 export const skills: { group: L; items: string[] }[] = [
-  { group: { pt: "Linguagens", en: "Languages" }, items: ["TypeScript", "JavaScript", "Python", "Java", "SQL"] },
-  { group: { pt: "Backend / APIs", en: "Backend / APIs" }, items: ["Node.js", "Express", "NestJS", "REST", "JWT"] },
+  { group: { pt: "Linguagens", en: "Languages" }, items: ["Java", "JavaScript", "Python", "C++", "SQL"] },
+  { group: { pt: "Backend / APIs", en: "Backend / APIs" }, items: ["Springboot", "Node.js", "Express", "NestJS", "REST", "JWT"] },
   { group: { pt: "Banco de Dados", en: "Databases" }, items: ["PostgreSQL", "MySQL", "MongoDB", "Redis"] },
-  { group: { pt: "DevOps", en: "DevOps" }, items: ["Git", "GitHub Actions", "Docker", "Linux"] },
+  { group: { pt: "DevOps", en: "DevOps" }, items: ["Git", "Docker", "Linux"] },
   { group: { pt: "Metodologias", en: "Methodologies" }, items: ["Scrum", "Kanban", "TDD", "Clean Code"] },
 ];
 
