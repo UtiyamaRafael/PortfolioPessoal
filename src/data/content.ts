@@ -37,7 +37,7 @@ export const ui = {
   code: { pt: "Código", en: "Code" },
   themeLabel: { pt: "Alternar tema", en: "Toggle theme" },
   langLabel: { pt: "Mudar idioma", en: "Change language" },
-  expTitle: { pt: "Experiência e formação", en: "Experience and education" },
+  expTitle: { pt: "Formação", en: "Education" },
   skillsTitle: { pt: "Habilidades e stack", en: "Skills and stack" },
 };
 

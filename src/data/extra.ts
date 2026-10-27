@@ -4,7 +4,7 @@ import type { L } from "./content";
 
 export const extra = {
   avatar: "https://github.com/utiyamaRafael.png",
-  location: { pt: "Brasil", en: "Brazil" } as L,
+  location: { pt: "Londrina, PR · Brasil", en: "Londrina, PR · Brazil" } as L,
   skip: { pt: "Pular para o conteúdo", en: "Skip to content" } as L,
   rotating: {
     pt: ["APIs REST", "Bancos de dados", "Regras de negócio"],
@@ -19,8 +19,8 @@ export const extra = {
   educationTitle: { pt: "Formação", en: "Education" } as L,
   languagesTitle: { pt: "Idiomas", en: "Languages" } as L,
   languages: [
-    { pt: "Português (nativo)", en: "Portuguese (native)" }, // TODO
-    { pt: "Inglês (leitura técnica)", en: "English (technical reading)" }, // TODO
+    { pt: "Português (nativo)", en: "Portuguese (native)" },
+    { pt: "Inglês (avançado)", en: "English (advanced)" },
   ] as L[],
   // Detalhes de cada item da timeline (mesma ordem de `timeline` em content.ts)
   timelineDetails: [
