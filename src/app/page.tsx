@@ -244,7 +244,7 @@ export default function PageV4() {
             {experience.map((item, i) => (
               <li key={i} className="mb-10 ml-6 last:mb-0">
                 <Reveal delay={i * 0.05}>
-                  <span className="absolute -left-[7px] mt-1.5 h-3 w-3 rounded-full border-2 border-white bg-slate-500 dark:border-zinc-950" />
+                  <span className="absolute -left-[7px] mt-1.5 h-3 w-3 rounded-full border-2 border-white bg-teal-500 dark:border-zinc-950" />
                   <p className="text-sm text-slate-500 dark:text-slate-400">{item.period[lang]}</p>
                   <h3 className="font-semibold">{item.role[lang]}</h3>
                   <p className="text-sm text-teal-600 dark:text-teal-400">{item.company[lang]}</p>
@@ -273,8 +273,6 @@ export default function PageV4() {
             ))}
           </ol>
         </Section>
-
-        
 
         {/* STACK + CERTIFICAÇÕES */}
         <Section id="stack" title={ui.skillsTitle[lang]}>

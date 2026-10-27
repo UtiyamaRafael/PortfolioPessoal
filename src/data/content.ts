@@ -44,8 +44,8 @@ export const ui = {
 
 export const nav: { id: string; label: L }[] = [
   { id: "sobre", label: { pt: "Sobre", en: "About" } },
-  { id: "formacao", label: { pt: "Formação", en: "Education" } },
   { id: "experiencia", label: { pt: "Experiência", en: "Experience" } },
+  { id: "formacao", label: { pt: "Formação", en: "Education" } },
   { id: "stack", label: { pt: "Stack", en: "Stack" } },
   { id: "projetos", label: { pt: "Projetos", en: "Projects" } },
   { id: "contato", label: { pt: "Contato", en: "Contact" } },
