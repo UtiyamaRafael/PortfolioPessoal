@@ -2,7 +2,7 @@
 
 import { useEffect, useState, type ReactNode } from "react";
 import { Github, Linkedin, Mail, Download, ExternalLink, MapPin, Copy, Check, Award } from "lucide-react";
-import { profile, ui, nav, timeline, skills, projects, type Lang } from "@/data/content";
+import { profile, ui, nav, education, experience, skills, projects, type Lang } from "@/data/content";
 import { extra } from "@/data/extra";
 import { useTheme, useLang } from "@/hooks/usePrefs";
 import Controls from "@/components/Controls";
@@ -224,8 +224,8 @@ export default function PageV4() {
               <div className={`${card} space-y-5 p-5`}>
                 <div>
                   <h3 className="mb-1 text-sm font-semibold text-slate-500 dark:text-slate-400">{extra.educationTitle[lang]}</h3>
-                  <p className="font-medium">{timeline[0].title[lang]}</p>
-                  <p className="text-sm text-teal-600 dark:text-teal-400">{timeline[0].place[lang]} · {timeline[0].period[lang]}</p>
+                  <p className="font-medium">{education[0].title[lang]}</p>
+                  <p className="text-sm text-teal-600 dark:text-teal-400">{education[0].place[lang]} · {education[0].year}</p>
                 </div>
                 <div>
                   <h3 className="mb-2 text-sm font-semibold text-slate-500 dark:text-slate-400">{extra.languagesTitle[lang]}</h3>
@@ -238,28 +238,43 @@ export default function PageV4() {
           </div>
         </Section>
 
-        {/* EXPERIÊNCIA E FORMAÇÃO */}
-        <Section id="trajetoria" title={ui.expTitle[lang]}>
+        {/* EXPERIÊNCIA PROFISSIONAL */}
+        <Section id="experiencia" title={ui.expTitle[lang]}>
           <ol className="relative ml-2 border-l border-slate-300 dark:border-slate-700">
-            {timeline.map((item, i) => {
-              const d = extra.timelineDetails[i];
-              return (
-                <li key={i} className="mb-10 ml-6 last:mb-0">
-                  <Reveal delay={i * 0.05}>
-                    <span className={`absolute -left-[7px] mt-1.5 h-3 w-3 rounded-full border-2 border-white dark:border-zinc-950 ${item.type === "formacao" ? "bg-teal-500" : "bg-slate-500"}`} />
-                    <p className="text-sm text-slate-500 dark:text-slate-400">{item.period[lang]}</p>
-                    <h3 className="font-semibold">{item.title[lang]}</h3>
-                    <p className="text-sm text-teal-600 dark:text-teal-400">{item.place[lang]}</p>
-                    <ul className="mt-2 max-w-xl list-disc space-y-1 pl-5 text-slate-600 dark:text-slate-300">
-                      {d.bullets.map((b, j) => <li key={j}>{b[lang]}</li>)}
-                    </ul>
-                    <div className="mt-3 flex flex-wrap gap-2">{d.tags.map((t) => <Badge key={t}>{t}</Badge>)}</div>
-                  </Reveal>
-                </li>
-              );
-            })}
+            {experience.map((item, i) => (
+              <li key={i} className="mb-10 ml-6 last:mb-0">
+                <Reveal delay={i * 0.05}>
+                  <span className="absolute -left-[7px] mt-1.5 h-3 w-3 rounded-full border-2 border-white bg-slate-500 dark:border-zinc-950" />
+                  <p className="text-sm text-slate-500 dark:text-slate-400">{item.period[lang]}</p>
+                  <h3 className="font-semibold">{item.role[lang]}</h3>
+                  <p className="text-sm text-teal-600 dark:text-teal-400">{item.company[lang]}</p>
+                  <ul className="mt-2 max-w-xl list-disc space-y-1 pl-5 text-slate-600 dark:text-slate-300">
+                    {item.bullets.map((b, j) => <li key={j}>{b[lang]}</li>)}
+                  </ul>
+                  <div className="mt-3 flex flex-wrap gap-2">{item.tags.map((t) => <Badge key={t}>{t}</Badge>)}</div>
+                </Reveal>
+              </li>
+            ))}
           </ol>
         </Section>
+
+        {/* FORMAÇÃO: só título, instituição e ano de conclusão */}
+        <Section id="formacao" title={ui.eduTitle[lang]}>
+          <ol className="relative ml-2 border-l border-slate-300 dark:border-slate-700">
+            {education.map((item, i) => (
+              <li key={i} className="mb-10 ml-6 last:mb-0">
+                <Reveal delay={i * 0.05}>
+                  <span className="absolute -left-[7px] mt-1.5 h-3 w-3 rounded-full border-2 border-white bg-teal-500 dark:border-zinc-950" />
+                  <p className="text-sm text-slate-500 dark:text-slate-400">{item.year}</p>
+                  <h3 className="font-semibold">{item.title[lang]}</h3>
+                  <p className="text-sm text-teal-600 dark:text-teal-400">{item.place[lang]}</p>
+                </Reveal>
+              </li>
+            ))}
+          </ol>
+        </Section>
+
+        
 
         {/* STACK + CERTIFICAÇÕES */}
         <Section id="stack" title={ui.skillsTitle[lang]}>
@@ -291,7 +306,7 @@ export default function PageV4() {
         </Section>
 
         {/* PROJETOS COM FILTRO */}
-        <Section id="projetos" title={nav[3].label[lang]}>
+        <Section id="projetos" title={nav[4].label[lang]}>
           <div className="mb-8 flex flex-wrap items-center gap-2" role="group">
             {extra.projectsFilters.map((f) => (
               <button
@@ -337,7 +352,7 @@ export default function PageV4() {
         </Section>
 
         {/* CONTATO: CTA */}
-        <Section id="contato" title={nav[4].label[lang]}>
+        <Section id="contato" title={nav[5].label[lang]}>
           <Reveal>
             <div className="rounded-2xl border border-teal-500/30 bg-teal-500/5 p-8 text-center sm:p-12">
               <p className="text-sm text-teal-600 dark:text-teal-400">{extra.cta.next[lang]}</p>

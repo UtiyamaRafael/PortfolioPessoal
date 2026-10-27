@@ -22,27 +22,6 @@ export const extra = {
     { pt: "Português (nativo)", en: "Portuguese (native)" },
     { pt: "Inglês (avançado)", en: "English (advanced)" },
   ] as L[],
-  // Detalhes de cada item da timeline (mesma ordem de `timeline` em content.ts)
-  timelineDetails: [
-    {
-      bullets: [
-        { pt: "Foco em algoritmos, estruturas de dados e bancos de dados.", en: "Focus on algorithms, data structures and databases." },
-        { pt: "Projetos acadêmicos em equipe com Git e metodologias ágeis.", en: "Team academic projects using Git and agile methods." },
-      ] as L[],
-      tags: ["SQL", "Java", "Git"],
-    },
-    {
-      bullets: [
-        { pt: "Modelagem de dados e criação de APIs REST.", en: "Data modeling and REST API design." },
-        { pt: "Versionamento e documentação de cada projeto no GitHub.", en: "Versioning and documenting every project on GitHub." },
-      ] as L[],
-      tags: ["Node.js", "PostgreSQL", "REST"],
-    },
-    {
-      bullets: [{ pt: "Descreva aqui o que você aprendeu e entregou.", en: "Describe here what you learned and delivered." }] as L[],
-      tags: ["TODO"],
-    },
-  ],
   projectsFilters: [
     { id: "all", label: { pt: "Todos", en: "All" } as L },
     { id: "api", label: { pt: "APIs", en: "APIs" } as L },
@@ -56,7 +35,7 @@ export const extra = {
   // TODO: troque pelos seus certificados
   certs: [
     { name: "Nome do curso ou certificado", org: "Plataforma", url: "#" },
-    { name: "Outro certificado", org: "Instituição", url: "#" },
+    
   ],
   cta: {
     next: { pt: "Próximo passo", en: "Next step" } as L,
